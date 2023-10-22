@@ -45,8 +45,8 @@ export default function ChatRoom(props: any) {
       await addDoc(messageRef, {
         text: newMessage,
         created_at: serverTimestamp(),
-        uid: auth.currentUser?.uid,
-        photoUrl: auth.currentUser?.photoURL,
+        user: auth.currentUser?.uid,
+        userPhotoUrl: auth.currentUser?.photoURL,
       });
     } catch (error) {
       console.error('Error adding message to Firestore:', error);

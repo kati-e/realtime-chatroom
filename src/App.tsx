@@ -25,7 +25,7 @@ function App() {
   return (
     <main className="app">
       {user ? (
-        <ChatRoom props={{ app: app }} />
+        <ChatRoom props={{ app: app, user: user }} />
       ) : (
         <SignIn props={{ app: app }} />
       )}
